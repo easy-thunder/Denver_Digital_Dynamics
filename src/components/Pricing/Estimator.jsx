@@ -2,8 +2,8 @@
 
 import { useMemo, useState, useRef, useEffect } from "react";
 import { useSearchParams } from "next/navigation"; import styles from "./Estimator.module.css";
-import Button from "../components/ui/Button/Button";
-import NumberInput from "../components/ui/NumberInput/NumberInput";
+import Button from "@/components/ui/Button/Button";
+import NumberInput from "@/components/ui/NumberInput/NumberInput";
 import Switch from "../ui/Switch/Switch";
 const RATES = { low: 50, mid: 75, high: 100 };
 const ANIMATION_RATE = 50;

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "./Hero.module.css";
-import Button from "../../components/ui/Button/Button";
-import SkillsBanner from "../../components/SkillsBanner/SkillsBanner";
-import OfferCard from "../../components/Cards/OfferCard/OfferCard";
+import Button from "@/components/ui/Button/Button";
+import SkillsBanner from "@/components/SkillsBanner/SkillsBanner";
+import OfferCard from "@/components/Cards/OfferCard/OfferCard";
 import { skills } from "@/lib/skills";
 
 export default function Hero() {
