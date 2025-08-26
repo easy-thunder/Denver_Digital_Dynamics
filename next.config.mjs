@@ -1,15 +1,13 @@
-// next.config.mjs
-import path from "path";
+// next.config.js
+const path = require("path");
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   webpack: (config) => {
-    // Ensure @ resolves to /src in ALL environments (Vercel included)
-    config.resolve.alias["@"] = path.resolve(process.cwd(), "src");
+    // Map '@' and the exact prefix you use most often
+    config.resolve.alias["@"] = path.resolve(__dirname, "src");
     config.resolve.alias["@/components"] = path.resolve(__dirname, "src/components");
     config.resolve.alias["@/lib"] = path.resolve(__dirname, "src/lib");
     return config;
   },
 };
-
-export default nextConfig;
