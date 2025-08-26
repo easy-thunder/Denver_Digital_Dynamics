@@ -28,6 +28,11 @@ export default function Skills() {
         (a, b) => new Date(b.acquisitionDate) - new Date(a.acquisitionDate)
       );
     }
+    if (sortBy === "Oldest") {
+      filtered = [...filtered].sort(
+        (a, b) => new Date(a.acquisitionDate) - new Date(b.acquisitionDate)
+      );
+    }
     if (sortBy === "A-Z") {
       filtered = [...filtered].sort((a, b) =>
         a.skillName.localeCompare(b.skillName)
@@ -92,15 +97,18 @@ export default function Skills() {
         <div className={styles.sortRow}>
           <label>
             Sort:
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className={styles.select}
-            >
-              <option>Newest</option>
-              <option>Oldest</option>
-              <option>A-Z</option>
-            </select>
+            <span className={styles.selectWrap}>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className={styles.select}
+                aria-label="Sort skills"
+              >
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>A-Z</option>
+              </select>
+            </span>
           </label>
         </div>
       </div>

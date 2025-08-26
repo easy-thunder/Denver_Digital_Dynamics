@@ -68,8 +68,8 @@ export default function ProcessSection() {
         </div>
 
         <div className={styles.ctaRow}>
-          <Button label="Get AI Site ($400+)" color="var(--color-ai)" href="/services/ai-site" size="lg" />
-          <Button label="Hire a Designer"   color="var(--color-accent)" href="/contact" size="lg" />
+          <Button label="Get AI Site ($400+)" color="var(--color-ai)" href="/Pricing?design=ai" size="lg" />
+          <Button label="Hire a Designer"   color="var(--color-accent)" href="/Pricing?design=designer" size="lg" />
         </div>
       </div>
     </section>

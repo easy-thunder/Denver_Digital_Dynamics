@@ -53,3 +53,86 @@
     margin-right: 8px;
   }
   
+
+
+  /* Label text next to select */
+.sortRow label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    color: var(--color-offwhite);
+    font-size: var(--body);
+  }
+  
+  /* Wrap to draw a custom arrow */
+  .selectWrap {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* The select itself */
+  .select {
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    background: var(--color-surface);
+    color: var(--color-offwhite);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+  
+    padding: 10px 36px 10px 12px; /* room for arrow */
+    line-height: 1.2;
+    font: inherit;
+  
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.04) inset,
+      0 8px 24px rgba(0,0,0,0.24);
+    transition: border-color 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  }
+  
+  /* Focus ring that fits your cyan accent */
+  .select:focus {
+    outline: none;
+    border-color: var(--color-cyan);
+    box-shadow:
+      0 0 0 3px color-mix(in srgb, var(--color-cyan) 30%, transparent),
+      0 8px 24px rgba(0,0,0,0.24);
+  }
+  
+  /* Hover state */
+  .select:hover {
+    background: var(--color-surface-2);
+  }
+  
+  /* Hide IE’s native arrow (does nothing elsewhere but harmless) */
+  .select::-ms-expand {
+    display: none;
+  }
+  
+  /* Custom arrow */
+  .selectWrap::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    width: 14px;
+    height: 14px;
+  
+    background: no-repeat center / 14px
+      url("data:image/svg+xml;utf8,\
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(224,216,209,0.9)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>\
+          <polyline points='6 9 12 15 18 9'/>\
+        </svg>");
+    opacity: 0.9;
+  }
+  
+  /* (Optional) style dropdown items in Chromium */
+  .select option {
+    background: var(--color-surface);
+    color: var(--color-offwhite);
+  }
+  

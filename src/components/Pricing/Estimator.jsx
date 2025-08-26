@@ -137,7 +137,7 @@ export default function Estimator() {
                                         onChange={() => setDesign("ai")}
                                     />
                                     <span>AI Special</span>
-                                    <em className={styles.segmentNote}>1×</em>
+                                    <em className={styles.segmentNote}></em>
                                 </label>
                                 <label className={`${styles.segment} ${design === "designer" ? styles.active : ""}`}>
                                     <input
@@ -148,7 +148,7 @@ export default function Estimator() {
                                         onChange={() => setDesign("designer")}
                                     />
                                     <span>Full Designer</span>
-                                    <em className={styles.segmentNote}>4×</em>
+                                    <em className={styles.segmentNote}></em>
                                 </label>
                             </div>
                         </div>

@@ -65,8 +65,8 @@ export default function Hero() {
               content={<p>Having worked to enhance AI performance combined with my start-up experience(At Novata) I have worked end to end. This diverse skillset makes me a great fit for many different roles. Dive deeper into my technical skills or view my résumé.</p>}
               buttons={
                 <>
-                  <Button label="Explore Technical Skills" color="var(--color-accent)"   href="/skills" />
-                  <Button label="View Résumé"              color="var(--color-surface-3)" href="/JD_SWENG_RES.pdf" />
+                  <Button label="Explore Technical Skills" color="var(--color-accent)"   href="/Skills" />
+                  <Button label="View Résumé"              color="var(--color-surface-3)" href="/downloads/JD_SWENG_RES.pdf" />
                 </>
               }
             />
