@@ -4,14 +4,20 @@ import ProcessSection from "@/components/Home/Process/ProcessSection";
 import BenefitsSection from "@/components/Home/Benefits/BenefitsSection";
 import ThemePlayground from "@/components/Home/ThemePlayground/ThemePlayground";
 import Estimator from "@/components/Pricing/Estimator";
+
+import { Suspense } from "react";
+
 export default function Home() {
   return (
     <main className={styles.page_content}>
-      <Hero />
-      <BenefitsSection />
-      <ProcessSection />
-      <ThemePlayground />
-      <Estimator />
+      <Suspense fallback={null}>
+
+        <Hero />
+        <BenefitsSection />
+        <ProcessSection />
+        <ThemePlayground />
+        <Estimator />
+      </Suspense>
     </main>
   );
 }
