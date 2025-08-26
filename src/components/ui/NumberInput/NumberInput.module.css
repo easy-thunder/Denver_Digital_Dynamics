@@ -1,0 +1,35 @@
+.input:focus, .stepper:focus-within, .switch:has(input:focus) .slider {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px color-mix(in oklab, var(--color-accent) 40%, transparent);
+  }
+
+
+  .stepper {
+    display: inline-grid; grid-template-columns: auto 64px auto; align-items: center;
+    background: var(--color-surface-2);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+  }
+  .stepper > button {
+    background: transparent; color: var(--color-offwhite);
+    border: none; padding: .45rem .7rem; cursor: pointer;
+  }
+  .stepper > input {
+    width: 64px; text-align: center;
+    background: transparent; color: var(--color-offwhite);
+    border: none; padding: .4rem .2rem;
+  }
+
+
+  /* Remove native number spinners inside our custom stepper */
+.stepper input[type="number"] {
+    appearance: textfield;        /* standard */
+    -moz-appearance: textfield;   /* Firefox */
+  }
+  
+  /* Chrome / Safari / Edge */
+  .stepper input[type="number"]::-webkit-outer-spin-button,
+  .stepper input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
