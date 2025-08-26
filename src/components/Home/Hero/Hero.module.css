@@ -1,0 +1,105 @@
+
+  
+  
+  .inner {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 40px);
+  
+    display: grid;
+    grid-template-columns: minmax(280px, 0.95fr) 1.05fr;
+    grid-template-areas:
+      "photo intro"
+      "banner banner"
+      "cards  cards";
+    gap: var(--gap-xl);
+    align-items: start;
+  }
+
+  .inner > * { min-width: 0; }
+
+  
+  
+  .mediaCorner {
+    grid-area: photo;
+    height: var(--corner-h);
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-xl);
+    background: #000;
+    box-shadow: 0 12px 28px rgba(0,0,0,.28);
+  }
+  
+  .mediaImage {
+    object-fit: cover;
+    
+    transform: translate(var(--corner-shift-x), var(--corner-shift-y)) scale(var(--corner-zoom));
+    filter: saturate(.95) contrast(1.05);
+    will-change: transform;
+    
+    object-position: var(--corner-object-pos);
+  }
+  
+  
+  .mediaShade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.1) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.55) 100%);
+    pointer-events: none;
+  }
+  
+  
+  
+  .intro {
+    grid-area: intro;
+    display: grid;
+    align-content: start;
+    gap: var(--gap-md);
+    justify-items: start;
+    z-index: 0; 
+  }
+  
+  .title { font-size: var(--h1); margin: 0; }
+  .subtitle { margin: 0; font-size: var(--body); opacity: .92; max-width: 56ch; }
+  .buttonsRow { display: flex; gap: var(--gap-md); flex-wrap: wrap; }
+  
+  
+  .rowFull { grid-column: 1 / -1; }
+
+  .cards {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-xl);
+    margin-top: var(--gap-md);
+  }
+  
+  
+  .cards > * { min-width: 0; }
+  
+  
+  @media (max-width: 960px) {
+    .intro { grid-column: 1; }
+    .inner {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "photo"
+        "intro"
+        "banner"
+        "cards";
+      gap: var(--gap-lg);
+    }
+  
+    .mediaCorner {
+      height: var(--corner-h-mobile);
+    }
+  
+    .mediaImage {
+      object-position: var(--corner-object-pos-mobile);
+    }
+  
+    .cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  

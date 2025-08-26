@@ -1,0 +1,61 @@
+.card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--gap-lg);
+    display: grid;
+    gap: var(--gap-lg);
+    align-items: start;
+    box-shadow: 0 12px 28px rgba(0,0,0,.28);
+  }
+  
+  .withImage {
+    grid-template-columns: minmax(160px, 0.9fr) 1.1fr;
+  }
+  
+  .media {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(180deg, #0d1520, #182233);
+  }
+  
+  .mediaImg {
+    object-fit: cover;
+    filter: saturate(.95) contrast(1.05);
+  }
+  
+  .mediaShade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.35));
+    pointer-events: none;
+  }
+  
+  .body { min-width: 0; }
+  
+  .stepBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .25rem .6rem;
+    border-radius: 9999px;
+    background: var(--color-surface-3);
+    border: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    margin-bottom: var(--gap-sm);
+  }
+  
+  .title {
+    margin: 0 0 var(--gap-sm) 0;
+    font-size: var(--h3);
+    position: relative;
+  }
+  
+  .content { font-size: var(--body); opacity: .95; }
+  
+  @media (max-width: 860px) {
+    .withImage { grid-template-columns: 1fr; }
+  }
+  

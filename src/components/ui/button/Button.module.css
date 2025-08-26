@@ -1,0 +1,27 @@
+.button {
+    --btn-bg: var(--color-accent);
+    --btn-fg: var(--color-offwhite);
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  
+    padding: 0.7rem 1rem;
+    border-radius: 999px;
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    transition: transform .12s ease, opacity .2s ease, box-shadow .2s ease;
+    white-space: nowrap;
+    font-weight: 600;
+  }
+  
+  .button:hover { transform: translateY(-1px); }
+  .button:active { transform: translateY(0); opacity: 0.95; }
+  
+  .sm { padding: 0.55rem 0.85rem; font-size: 0.9rem; }
+  .md { padding: 0.7rem 1rem; }
+  .lg { padding: 0.9rem 1.2rem; font-size: 1.05rem; }
+  
