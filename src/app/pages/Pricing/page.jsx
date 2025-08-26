@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Estimator from "@/components/Pricing/Estimator";
 import styles from "@/app/page.module.css";
 
@@ -9,7 +10,9 @@ export const metadata = {
 export default function PricingPage() {
   return (
     <main className={styles.page_content}>
-      <Estimator />
+      <Suspense fallback={<div style={{minHeight: 120}} />}>
+        <Estimator />
+      </Suspense>
     </main>
   );
 }
