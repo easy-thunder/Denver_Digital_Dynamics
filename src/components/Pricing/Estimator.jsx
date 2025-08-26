@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState, useRef, useEffect } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation"; import styles from "./Estimator.module.css";
 import NumberInput from "@/components/ui/NumberInput/NumberInput";
 import Button from "@/components/ui/Button/Button";
