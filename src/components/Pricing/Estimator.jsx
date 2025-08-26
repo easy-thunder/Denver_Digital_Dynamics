@@ -25,7 +25,7 @@ export default function Estimator() {
     const searchParams = useSearchParams();
     const designParam = (searchParams.get("design") || "").toLowerCase();
 
-    // default to "ai"; will be overridden by query param (if valid)
+    
     const [design, setDesign] = useState("ai");
 
     useEffect(() => {
@@ -96,10 +96,32 @@ export default function Estimator() {
         });
     }
 
-    function handleContactSubmit(e) {
+
+    async function handleContactSubmit(e) {
         e.preventDefault();
-        alert("Thanks! This form is design-only for now. We’ll wire it to email later.");
-    }
+        try {
+          const payload = {
+            name,
+            email,
+            phone,
+            message,
+            estimate: money(total),
+            website: "" 
+          };
+          const res = await fetch("/api/contact", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+          const data = await res.json();
+          if (!res.ok || !data?.success) throw new Error(data?.error || "Send failed");
+          alert("Thanks! I’ll be in touch shortly.");
+        } catch (err) {
+          console.error(err);
+          alert("Sorry, there was a problem sending your message. Please try again.");
+        }
+      }
+
 
     return (
         <section className={styles.section}>
