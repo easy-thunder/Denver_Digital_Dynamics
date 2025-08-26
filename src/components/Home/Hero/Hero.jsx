@@ -27,8 +27,8 @@ export default function Hero() {
             <p className={styles.subtitle}>I’m Jake, and this is Denver Digital Dynamics. Here you’ll find my résumé and portfolio, showcasing my skills for prospective employers, as well as the work I lead with a small team providing web development and business solutions.</p>
 
             <div className={styles.buttonsRow}>
-              <Button label="Skills"  color="var(--color-accent)"   href="/skills" />
-              <Button label="Résumé"  color="var(--color-surface-3)" href="/JD_SWENG_RES.pdf" />
+              <Button label="Skills"  color="var(--color-accent)"   href="/Skills" />
+              <Button label="Résumé"  color="var(--color-surface-3)" href="/downloads/JD_SWENG_RES.pdf" />
             </div>
           </div>
   
