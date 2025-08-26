@@ -6,7 +6,7 @@ export function skillsToDisplayFunction() {
         coreOrSupporting: "Core",
         information: "I started learning Vanilla Javascript with Udemy before I started my classes at FlatIron where I stretched this skill. After graduation I mainly use Vanilla Javascript in Chrome extensions with Rollup to easily webscrape data with query-Selectors.",
         gameProjects: [],
-        articles: [{ text: "chrome-extension-web-scrape", href: "skills/chrome-extension-web-scrape" }],
+        articles: [/*{ text: "chrome-extension-web-scrape", href: "skills/chrome-extension-web-scrape" }*/],
         articleLabel: "Articles:",
         tools: ['JavaScript'],
         acquisitionDate: 'June 2022'
@@ -67,7 +67,7 @@ export function skillsToDisplayFunction() {
         coreOrSupporting: "Core",
         information: "Dynamic Rendering allows applications to generate UI components based on data, enabling flexibility and scalability. In React and Next.js, this involves mapping over structured data (e.g., from a database or API) and dynamically rendering components.In Next.js, dynamic routes ([id].js) combined with the useRouter hook enable content to be fetched and displayed based on URL parameters, making it easy to build data-driven pages such as blogs, profiles, and product listings.",
         gameProjects: [],
-        articles: [{ text: 'dynamicJSX', href: 'skills/dynamicJSX' }],
+        articles: [/*{ text: 'dynamicJSX', href: 'skills/dynamicJSX' }*/], // Temporarily removed article link
         articleLabel: "Articles:",
         tools: ['JavaScript', 'PostgreSQL', 'JSON', 'TypeScript'],
         acquisitionDate: 'January 2023'
@@ -108,7 +108,7 @@ export function skillsToDisplayFunction() {
         coreOrSupporting: "Core",
         information: "I have utilized many different tools for API routing. I have used Express router for routing to my controllers; Next.js Built in file routing where you just build your controller and the routes are based off file structure. I have used Sinatra separate from Ruby on Rails, and I have used Ruby on Rails.",
         gameProjects: [],
-        articles: [{ text: 'restful-express', href: 'skills/restful-express' }],
+        articles: [/*{ text: 'restful-express', href: 'skills/restful-express' }*/], // Temporarily removed article link
         articleLabel: "Articles:",
         tools: ['Express', 'JavaScript', 'TypeScript', 'NextJS', 'Ruby', 'Sinatra', 'Ruby on Rails'],
         acquisitionDate: 'January 2023'
@@ -119,7 +119,7 @@ export function skillsToDisplayFunction() {
         coreOrSupporting: "Core",
         information: "I have designed RESTful APIs that handle client requests via controllers, using POST, GET, UPDATE, and DELETE methods to interact with PostgreSQL. I have implemented this using raw PSQL queries, Sequelize ORM, and Sinatra to manage structured data efficiently.",
         gameProjects: [],
-        articles: [{ text: 'restful-express', href: 'skills/restful-express' }],
+        articles: [/*{ text: 'restful-express', href: 'skills/restful-express' }*/], // Temporarily removed article link
         articleLabel: "Articles:",
         tools: ['PSQL', 'Express', 'Sinatra', 'Ruby on Rails', 'PostgreSQL'],
         acquisitionDate: 'February 2023'
@@ -140,7 +140,7 @@ export function skillsToDisplayFunction() {
         coreOrSupporting: "Core",
         information: "I used document.querySelector and other DOM methods to dynamically select, modify, and interact with elements on a webpage, enabling real-time UI updates and user interactions.",
         gameProjects: [],
-        articles: [{ text: 'chrome-extension-web-scrape', href: 'skills/chrome-extension-web-scrape' }],
+        articles: [/*{ text: 'chrome-extension-web-scrape', href: 'skills/chrome-extension-web-scrape' }*/], // Temporarily removed article link
         articleLabel: "Articles:",
         tools: ['JavaScript', 'TypeScript'],
         acquisitionDate: 'December 2023'
@@ -152,7 +152,7 @@ export function skillsToDisplayFunction() {
         information: "I leveraged SWR’s automatic revalidation and real-time data fetching to synchronize client states across users, enabling interactive multiplayer games like Connect 4 and Pentago, as well as instant messaging systems. I have also utilized WebRTC with socket.io to build a real time video platform.",
         gameProjects: [{ text: 'Connect Four', href: 'games/ConnectFour' }, { text: 'pentago', href: 'games/pentago' }],
         gameProjectLabel: "Projects:",
-        articles: [{ text: 'zoom-application', href: 'skills/zoom-application' }],
+        articles: [/*{ text: 'zoom-application', href: 'skills/zoom-application' }*/], // Temporarily removed article link
         articleLabel: "Articles:",
         tools: ['Next.js', 'useSWR'],
         acquisitionDate: 'July 2024'

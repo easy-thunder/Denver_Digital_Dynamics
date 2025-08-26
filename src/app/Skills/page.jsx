@@ -13,7 +13,6 @@ export default function Skills() {
   const [coreFilter, setCoreFilter] = useState("All");
   const [sortBy, setSortBy] = useState("Newest");
 
-  // Filter + sort logic
   const skills = useMemo(() => {
     let filtered = allSkills;
 
@@ -42,7 +41,7 @@ export default function Skills() {
     <main className={styles.skills}>
       <SkillsBanner title="Skills" subtitle="Filter and sort my stack across client, server, data, and analytics." />
 
-      {/* Controls */}
+      
       <div className={styles.controls}>
         <div className={styles.filterRow}>
           <Button
@@ -106,7 +105,6 @@ export default function Skills() {
         </div>
       </div>
 
-      {/* Skills Grid */}
       <div className={styles.grid}>
         {skills.map((skill) => (
           <DescriptionCard
