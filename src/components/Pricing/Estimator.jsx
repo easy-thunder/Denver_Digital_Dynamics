@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation"; import styles from "./Estimat
 import NumberInput from "@/components/ui/NumberInput/NumberInput";
 import Button from "@/components/ui/Button/Button";
 import Switch from "../ui/Switch/Switch";
-const RATES = { low: 50, mid: 75, high: 100 };
+const RATES = { mid: 75};
 const ANIMATION_RATE = 50;
 const RUSH_PERCENT = 0.25;
 const QA_RATE = 100;
@@ -36,9 +36,7 @@ export default function Estimator() {
 
     const [pages, setPages] = useState(1);
 
-    const [sectionsLow, setSectionsLow] = useState(1);
     const [sectionsMid, setSectionsMid] = useState(2);
-    const [sectionsHigh, setSectionsHigh] = useState(0);
 
     const [animations, setAnimations] = useState(0);
 
@@ -59,7 +57,7 @@ export default function Estimator() {
 
 
     const sectionsSubtotal =
-        sectionsLow * RATES.low + sectionsMid * RATES.mid + sectionsHigh * RATES.high;
+       sectionsMid * RATES.mid;
 
     const designFactor = design === "designer" ? 4 : 1;
 
@@ -88,7 +86,7 @@ export default function Estimator() {
 
     const total = Math.max(0, baseBeforeRush) + rushFee;
 
-    const sectionsTotalCount = sectionsLow + sectionsMid + sectionsHigh;
+    const sectionsTotalCount = sectionsMid;
 
     function toggleIntegration(key) {
         setIntegrations((prev) => {
@@ -168,11 +166,9 @@ export default function Estimator() {
 
 
                         <div className={styles.group}>
-                            <div className={styles.groupTitle}>Sections by density</div>
+                            <div className={styles.groupTitle}>Number of Sections</div>
                             <div className={styles.rows}>
-                                <DensityRow label="Low" rate={RATES.low} value={sectionsLow} setValue={setSectionsLow} />
-                                <DensityRow label="Mid" rate={RATES.mid} value={sectionsMid} setValue={setSectionsMid} />
-                                <DensityRow label="High" rate={RATES.high} value={sectionsHigh} setValue={setSectionsHigh} />
+                                <DensityRow label="" rate={RATES.mid} value={sectionsMid} setValue={setSectionsMid} />
                             </div>
                         </div>
 
@@ -193,7 +189,7 @@ export default function Estimator() {
                         <div className={styles.group}>
                             <div className={styles.groupTitle}>Content readiness (discounts)</div>
                             <label className={styles.switchRow}>
-                                <span>Copy ready <em className={styles.muted}>(-${DISCOUNTS.copy})</em></span>
+                                <span>Do you have your paragraphs ready <em className={styles.muted}>(-${DISCOUNTS.copy})</em></span>
                                 <Switch checked={copyReady} onChange={setCopyReady} />
                             </label>
                             <label className={styles.switchRow}>
@@ -365,7 +361,7 @@ function DensityRow({ label, rate, value, setValue }) {
     return (
         <label className={styles.row}>
             <span className={styles.label}>
-                {label} density <em className={styles.muted}>(${rate} / section)</em>
+                {label}  <em className={styles.muted}>(${rate} / section)</em>
             </span>
             <NumberInput value={value} setValue={setValue} min={0} />
         </label>

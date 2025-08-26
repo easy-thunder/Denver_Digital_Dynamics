@@ -16,6 +16,7 @@
     transition: transform .12s ease, opacity .2s ease, box-shadow .2s ease;
     white-space: nowrap;
     font-weight: 600;
+    cursor: pointer;
   }
   
   .button:hover { transform: translateY(-1px); }
