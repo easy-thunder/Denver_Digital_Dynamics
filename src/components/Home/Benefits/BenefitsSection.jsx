@@ -55,7 +55,7 @@ export default function BenefitsSection() {
           <h2 id="benefits-title" className={styles.h2}>
             Why your business needs its own website
           </h2>
-          <p className={styles.lead}>Why this matters</p>
+          <p className={styles.lead}>The hub of your brand!</p>
           <div className={styles.rule} />
         </header>
 

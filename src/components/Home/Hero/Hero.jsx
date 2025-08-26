@@ -53,8 +53,8 @@ export default function Hero() {
               }
               buttons={
                 <>
-                  <Button label="Get AI Site ($400+)" color="var(--color-ai)"        href="/services/ai-site" />
-                  <Button label="Hire a Designer"     color="var(--color-surface-3)" href="/contact" />
+                  <Button label="Get AI Site ($400+)" color="var(--color-ai)"          href="/pages/Pricing?design=ai"/>
+                  <Button label="Hire a Designer"     color="var(--color-surface-3)"   href="/pages/Pricing?design=designer" />
                 </>
               }
             />
@@ -62,7 +62,7 @@ export default function Hero() {
             <OfferCard
               title="For Employers"
               underline
-              content={<p>Having worked to enhance AI performance combined with my start-up experience I have developed a wide set of skills. I would make me a great fit for many different roles. Dive deeper into my technical skills or view my résumé.</p>}
+              content={<p>Having worked to enhance AI performance combined with my start-up experience(At Novata) I have worked end to end. This diverse skillset makes me a great fit for many different roles. Dive deeper into my technical skills or view my résumé.</p>}
               buttons={
                 <>
                   <Button label="Explore Technical Skills" color="var(--color-accent)"   href="/skills" />
