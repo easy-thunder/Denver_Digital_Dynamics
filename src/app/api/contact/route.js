@@ -68,7 +68,8 @@ async function sendWithResend({ name, email, phone, message, estimate }) {
 // ---------- Provider: Gmail SMTP via Nodemailer ----------
 async function sendWithGmail({ name, email, phone, message, estimate }) {
   try {
-    const nodemailer = (await import("nodemailer")).default;
+    const mod = await import("nodemailer");
+    const nodemailer = mod.default ?? mod;    // works in both ESM/CJS bundles
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
