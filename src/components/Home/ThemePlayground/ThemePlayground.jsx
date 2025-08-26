@@ -207,31 +207,36 @@ function Reason({ icon, title, text, variant = "teal" }) {
 }
 
 /* normalize any rgba/rgb/var value to a hex for <input type="color"> */
+/* normalize any rgba/rgb/var value to a hex for <input type="color"> */
 function toHex(value) {
-  if (!value) return "#000000";
-  const v = value.trim();
-  if (v.startsWith("#")) return normalizeHex(v);
-
+    if (!value) return "#000000";
+    const v = String(value).trim();
+    if (v.startsWith("#")) return normalizeHex(v);
   
-  const probe = document.createElement("span");
-  probe.style.color = v;
-  document.body.appendChild(probe);
-  const rgb = getComputedStyle(probe).color; 
-  probe.remove();
-
-  const m = rgb.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
-  if (!m) return "#000000";
-
-  const [r, g, b] = m.slice(1, 4).map(n => Math.max(0, Math.min(255, parseInt(n, 10))));
-  return "#" + [r, g, b].map(n => n.toString(16).padStart(2, "0")).join("");
-}
-
-function normalizeHex(h) {
-  const x = h.replace(/[^#a-fA-F0-9]/g, "");
-  if (x.length === 4) { 
-    return "#" + [...x.slice(1)].map(ch => ch + ch).join("");
+    // Guard: if not in a browser, bail safely
+    if (typeof window === "undefined" || typeof document === "undefined") {
+      return "#000000";
+    }
+  
+    // Resolve via browser (works for rgb/rgba/hsl/var(...))
+    const probe = document.createElement("span");
+    probe.style.color = v;
+    document.body.appendChild(probe);
+    const rgb = getComputedStyle(probe).color; // "rgb(r,g,b)" or "rgba(r,g,b,a)"
+    probe.remove();
+  
+    const m = rgb.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/i);
+    if (!m) return "#000000";
+  
+    const [r, g, b] = m.slice(1, 4).map(n => Math.max(0, Math.min(255, parseInt(n, 10))));
+    return "#" + [r, g, b].map(n => n.toString(16).padStart(2, "0")).join("");
   }
-  if (x.length === 7) return x.slice(0, 7);  
-  if (x.length === 9) return x.slice(0, 7);  
-  return "#000000";
-}
+  
+  function normalizeHex(h) {
+    const x = h.replace(/[^#a-fA-F0-9]/g, "");
+    if (x.length === 4) return "#" + [...x.slice(1)].map(ch => ch + ch).join(""); // #rgb
+    if (x.length === 7) return x.slice(0, 7);  // #rrggbb
+    if (x.length === 9) return x.slice(0, 7);  // #rrggbbaa → drop alpha
+    return "#000000";
+  }
+  
