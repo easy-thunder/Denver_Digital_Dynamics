@@ -53,8 +53,8 @@ export default function Hero() {
               }
               buttons={
                 <>
-                  <Button label="Get AI Site ($400+)" color="var(--color-ai)"          href="/pages/Pricing?design=ai"/>
-                  <Button label="Hire a Designer"     color="var(--color-surface-3)"   href="/pages/Pricing?design=designer" />
+                  <Button label="Get AI Site ($400+)" color="var(--color-ai)"          href="/Pricing?design=ai"/>
+                  <Button label="Hire a Designer"     color="var(--color-surface-3)"   href="/Pricing?design=designer" />
                 </>
               }
             />
