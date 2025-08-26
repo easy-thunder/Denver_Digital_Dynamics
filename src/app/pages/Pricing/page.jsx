@@ -1,3 +1,4 @@
+"use client";
 import { Suspense } from "react";
 import Estimator from "@/components/Pricing/Estimator";
 import styles from "@/app/page.module.css";
