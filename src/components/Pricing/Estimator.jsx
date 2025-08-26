@@ -276,7 +276,7 @@ export default function Estimator() {
                                 <textarea
                                     className={`${styles.input} ${styles.textarea}`}
                                     rows={3}
-                                    placeholder="Describe what you have in mind. If it's outside my usual stack, I often explore at a reduced learning rate."
+                                    placeholder="Describe what you have in mind. There are so many potential business solutions we can implement outside of website creation. So if you have something else in mind, let me know!"
                                     value={otherIntegration}
                                     onChange={(e) => setOtherIntegration(e.target.value)}
                                 />
