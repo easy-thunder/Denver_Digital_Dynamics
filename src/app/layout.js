@@ -37,7 +37,13 @@ export const metadata = {
     ]
   },
   twitter: { card: 'summary_large_image' },
-  alternates: { canonical: '/' }
+  alternates: { canonical: '/' },
+  other: {
+    "geo.region": "US-CO",
+    "geo.placename": "Denver",
+    "geo.position": "39.7392;-104.9903",
+    "ICBM": "39.7392, -104.9903"
+  }
 };
 
 
