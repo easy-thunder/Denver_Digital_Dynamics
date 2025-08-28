@@ -9,6 +9,8 @@ const RATES = { mid: 75};
 const ANIMATION_RATE = 50;
 const RUSH_PERCENT = 0.25;
 const QA_RATE = 100;
+const GOOGLE_PROFILE_RATE = 100;
+const META_DATA_RATE = 100;
 const DISCOUNTS = { copy: 25, brand: 25 };
 
 const INTEGRATIONS = [
@@ -48,6 +50,8 @@ export default function Estimator() {
 
     const [deadline, setDeadline] = useState("");
     const [extendedQA, setExtendedQA] = useState(false);
+    const [googleSEO, setGoogleSEO] = useState(false);
+    const [metaData, setMetaData] = useState(false);
 
 
     const [name, setName] = useState("");
@@ -73,11 +77,13 @@ export default function Estimator() {
 
     const discountSubtotal = (copyReady ? DISCOUNTS.copy : 0) + (brandReady ? DISCOUNTS.brand : 0);
     const qaSubtotal = extendedQA ? QA_RATE : 0;
+    const SEOSubtotal = (googleSEO ? GOOGLE_PROFILE_RATE : 0) + (metaData ? META_DATA_RATE : 0);
 
     const baseBeforeRush =
         sectionsSubtotal * designFactor +
         animationsSubtotal +
         integrationsSubtotal +
+        SEOSubtotal +
         qaSubtotal -
         discountSubtotal;
 
@@ -245,7 +251,21 @@ export default function Estimator() {
                                 Standard QA includes latest Chrome/Firefox/Safari + iOS/Android.
                             </p>
                         </div>
+
+
+                        <div className={styles.group}>
+                                <div className={styles.groupTitle}>Additional SEO</div>
+                                <label className={styles.switchRow}>
+                                    <span>Google Business Profile Setup<em className={styles.muted}>(+${GOOGLE_PROFILE_RATE})</em></span>
+                                    <Switch checked={googleSEO} onChange={setGoogleSEO} />
+                                </label>
+                                <label className={styles.switchRow}>
+                                    <span>Increase site visibility with additional meta-data<em className={styles.muted}>(+${META_DATA_RATE})</em></span>
+                                    <Switch checked={metaData} onChange={setMetaData} />
+                                </label>
+                        </div>
                     </div>
+
 
 
                     <div className={`${styles.card} ${styles.solutions}`}>
