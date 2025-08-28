@@ -24,11 +24,19 @@ export const metadata = {
   openGraph: {
     title: 'Denver Digital Dynamics',
     description: 'Small-business websites from $400.',
-    url: 'https://denverdigitaldynamics.com',
+    url: siteUrl,
     siteName: 'Denver Digital Dynamics',
-    images: ['/og.png'],
+    images: [
+      { url: `${siteUrl}/og.png`, width: 1200, height: 630, alt: 'Denver Digital Dynamics' }
+    ],
     locale: 'en_US',
     type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [`${siteUrl}/og.png`],
+    title: 'Denver Digital Dynamics',
+    description: 'Small-business websites from $400.'
   },
 
   icons: {
