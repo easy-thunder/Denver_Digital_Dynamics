@@ -15,28 +15,23 @@ const geistMono = Geist_Mono({
 
 
 export const metadata = {
-  metadataBase: new URL('https://denverdigitaldynamics.com'),
-  title: {
-    default: 'Denver Digital Dynamics',
-    template: '%s — Denver Digital Dynamics'
-  },
+  metadataBase: new URL(siteUrl),
+  title: { default: 'Denver Digital Dynamics', template: '%s — Denver Digital Dynamics' },
   description: 'Small-business websites from $400. Design • Develop • Deploy.',
   openGraph: {
     title: 'Denver Digital Dynamics',
     description: 'Small-business websites from $400.',
     url: siteUrl,
     siteName: 'Denver Digital Dynamics',
-    images: [
-      { url: `${siteUrl}/og.png`, width: 1200, height: 630, alt: 'Denver Digital Dynamics' }
-    ],
+    images: [{ url: '/og.png?v=2', width: 1200, height: 630, alt: 'Denver Digital Dynamics' }],
     locale: 'en_US',
-    type: 'website'
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    images: [`${siteUrl}/og.png`],
+    images: ['/og.png?v=2'],
     title: 'Denver Digital Dynamics',
-    description: 'Small-business websites from $400.'
+    description: 'Small-business websites from $400.',
   },
 
   icons: {
