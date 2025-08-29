@@ -4,17 +4,7 @@ import Link from "next/link";
 import { Home } from "lucide-react";
 import styles from "./HomeButton.module.css";
 
-/**
- * HomeButton
- * Props:
- * - href: string (default "/")
- * - showLabel: boolean (default false)
- * - label: string (default "Home")
- * - size: "sm" | "md" | "lg" (default "md")
- * - floating: boolean (default false)
- * - position: "bottom-right" | "bottom-left" | "top-right" | "top-left" (default "bottom-right")
- * - className: string (optional)
- */
+
 export default function HomeButton({
   href = "/",
   showLabel = false,

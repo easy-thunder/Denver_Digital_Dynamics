@@ -1,9 +1,8 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import HomeButton from "@/components/ui/HomeButton/HomeButton";
 import HomeButtonGuard from "@/components/ui/HomeButton/HomeButtonGuard";
-
+import Footer from "@/components/Footer/Footer";
 
 
 
@@ -69,6 +68,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <HomeButtonGuard />
         {children}
+        <Footer />  
       </body>
     </html>
   );

@@ -1,0 +1,119 @@
+/* Borderless, narrower container placed in layout */
+.section {
+    /* how narrow you want the footer overall */
+    --footer-max: 980px;
+    width: min(var(--footer-max), calc(100% - var(--frame-gap) * 2));
+    margin: var(--gap-xl) auto var(--frame-gap);
+    background: transparent;   /* no bubble */
+    border: 0;
+    box-shadow: none;
+    color: var(--color-offwhite);
+  }
+  
+  .inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* links | contact */
+    gap: var(--gap-xl);
+    padding: 0;                    /* lean; no card padding */
+  }
+  
+  /* brand row sits full width above columns */
+  .brandRow {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .logo { border-radius: 6px; }
+  .titleBox { line-height: 1.1; }
+  .title {
+    font-weight: 700;
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem);
+  }
+  .tag {
+    font-size: clamp(.9rem, 1.6vw, 1rem);
+    opacity: .95;
+  }
+  
+  /* columns */
+  .links, .contact { display: flex; flex-direction: column; gap: 8px; }
+  .colTitle { font-weight: 700; font-size: 1rem; margin-bottom: 2px; }
+  
+  .linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 6px;
+    grid-template-columns: 1fr 1fr;   /* denser list in compact width */
+  }
+  .linkList a {
+    color: var(--color-offwhite);
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .linkList a:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  
+  .contactList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+  }
+  .contactList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .contactList a {
+    color: var(--color-offwhite);
+    text-decoration: none;
+  }
+  .contactList a:hover { color: var(--color-accent); }
+  
+  .icon {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+    color: var(--color-accent);
+  }
+  
+  /* socials */
+  .socialRow { display: flex; gap: 10px; margin-top: 8px; }
+  .social {
+    width: 34px; height: 34px;
+    border-radius: 999px;
+    border: 1px solid var(--color-border);
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--color-offwhite);
+    transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .social:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+    border-color: var(--color-accent);
+  }
+  .social :global(svg) { width: 18px; height: 18px; stroke-width: 2; }
+  
+  /* bottom line */
+  .bottom {
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid var(--color-border);
+    display: flex; gap: 10px; align-items: center; justify-content: center;
+    font-size: 0.95rem;
+    opacity: .9;
+  }
+  .dot { opacity: .5; }
+  
+  @media (max-width: 720px) {
+    .inner { grid-template-columns: 1fr; }
+    .linkList { grid-template-columns: 1fr; }
+  }
+  
