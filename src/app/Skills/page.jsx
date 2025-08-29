@@ -44,7 +44,7 @@ export default function Skills() {
 
   return (
     <main className={styles.skills}>
-      <SkillsBanner title="Skills" subtitle="Filter and sort my stack across client, server, data, and analytics." />
+      {/* <SkillsBanner title="Skills" subtitle="Filter and sort my stack across client, server, data, and analytics." /> */}
 
       
       <div className={styles.controls}>

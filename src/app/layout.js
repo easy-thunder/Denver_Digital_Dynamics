@@ -1,5 +1,11 @@
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import HomeButton from "@/components/ui/HomeButton/HomeButton";
+import HomeButtonGuard from "@/components/ui/HomeButton/HomeButtonGuard";
+
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,7 +51,6 @@ export const metadata = {
       { url: "/logos/diamond-weave-logo-1024.png", sizes: "32x32", type: "image/png" },
     ]
   },
-  twitter: { card: 'summary_large_image' },
   alternates: { canonical: '/' },
   other: {
     "geo.region": "US-CO",
@@ -62,6 +67,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <HomeButtonGuard />
         {children}
       </body>
     </html>
