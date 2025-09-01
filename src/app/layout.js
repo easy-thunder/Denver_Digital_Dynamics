@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HomeButtonGuard from "@/components/ui/HomeButton/HomeButtonGuard";
 import Footer from "@/components/Footer/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import AnalyticsClient from "@/components/Analytics/AnalyticsClient";
 
 
 const geistSans = Geist({
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
   };
   return (
     <html lang="en">
-      <Analytics beforeSend={beforeSend}/>
+      <AnalyticsClient/>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <HomeButtonGuard />
         {children}
