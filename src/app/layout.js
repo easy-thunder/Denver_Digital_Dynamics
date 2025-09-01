@@ -63,9 +63,17 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+
+  const beforeSend = (event) => {
+    if (localStorage.getItem('va-disable') === 'true') {
+      console.log('Vercel Analytics: Ignoring event for developer');
+      return null; 
+    }
+    return event;
+  };
   return (
     <html lang="en">
-      <Analytics />
+      <Analytics beforeSend={beforeSend}/>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <HomeButtonGuard />
         {children}
