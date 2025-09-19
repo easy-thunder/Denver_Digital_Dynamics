@@ -110,7 +110,7 @@ export default function Projects() {
             <p>
               Our ranking algorithm detects partisan skew and lifts posts that earn support across
               lines—while burying one-sided outrage. You’ll also be able to attach posts to real
-              issues via the Google Civics API and browse a concise “three arguments” view.
+              ballot issues in your local area via the Google Civics API and browse a concise “three arguments” view.
             </p>
             <div className={styles.badges}>
               <span className={styles.badge}>Bipartisan signal</span>
