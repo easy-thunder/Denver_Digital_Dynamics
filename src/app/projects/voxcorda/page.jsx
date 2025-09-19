@@ -108,7 +108,6 @@ export default function Projects() {
 
           <div className={styles.longform}>
             <p>
-              The vision of <strong>Voxcorda</strong> is to bring people back to shared reality.
               Our ranking algorithm detects partisan skew and lifts posts that earn support across
               lines—while burying one-sided outrage. You’ll also be able to attach posts to real
               issues via the Google Civics API and browse a concise “three arguments” view.
