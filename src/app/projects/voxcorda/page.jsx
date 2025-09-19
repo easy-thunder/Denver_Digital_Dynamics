@@ -103,7 +103,7 @@ export default function Projects() {
           <h1 className={styles.h1}>Voxcorda Pilot</h1>
           <p className={styles.tagline}>
             A people-first social platform that surfaces **bipartisan agreement** and downshifts heat.
-            Launching with a feed, messaging, and Civics links to real issues.
+            This starts as a social media platform. The final vision is to remove the bought politicians through direct voting, revocable delegation, and transparent profiles for those we elect.
           </p>
 
           <div className={styles.longform}>
@@ -174,6 +174,9 @@ export default function Projects() {
 
             <div className={styles.links}>
               <Link href="/projects/voxcorda/manifesto" className={styles.link}>Jacob's Manifesto</Link>
+              <span className={styles.sep}>•</span>
+              <a href="https://gofund.me/8052698c9" className={styles.link}>Fund Me</a>
+
             </div>
           </div>
 
