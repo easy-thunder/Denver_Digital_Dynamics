@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import styles from './Projects.module.css'
+import BallotThreads from '@/components/demo/BallotThreads'
 
 export default function Projects() {
   const [busy, setBusy] = useState(false)
@@ -274,6 +275,11 @@ export default function Projects() {
           </div>
         </div>
       </section>
+      <br/>
+      <br/>
+      <br/>
+      <h2>Ballot issues example:</h2>
+      <BallotThreads />
     </main>
   )
 }

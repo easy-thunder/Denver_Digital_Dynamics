@@ -1,0 +1,99 @@
+.page { padding-bottom: var(--gap-xl); }
+
+/* Issue header + filter */
+.issue {
+  background:
+    radial-gradient(900px 420px at 8% -10%,
+      color-mix(in oklab, var(--color-accent) 10%, transparent),
+      transparent),
+    linear-gradient(180deg, var(--color-surface-2), var(--color-surface-3));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--gap-lg);
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.55);
+  margin-bottom: var(--gap-lg);
+}
+.h1 { font-size: var(--h3); margin: 0 0 6px; }
+.meta { margin: 6px 0; opacity: .9; }
+
+.filters { display:flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+.pill {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-offwhite);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.pillActive {
+  outline: 2px solid color-mix(in oklab, var(--color-cyan) 50%, transparent);
+}
+
+/* List of posts */
+.list { display:grid; gap: var(--gap-lg); }
+
+/* Single post */
+.post {
+  border-radius: var(--radius-xl);
+  padding: var(--gap-lg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.55);
+}
+
+/* stance accents */
+.for     { outline: 2px solid color-mix(in oklab, var(--color-ai) 45%, transparent); }
+.against { outline: 2px solid color-mix(in oklab, crimson 45%, transparent); }
+.nuanced { outline: 2px solid color-mix(in oklab, var(--color-offwhite) 35%, transparent); }
+.badge   {
+  border: 1px solid var(--color-border);
+  border-radius: 999px; padding: 3px 8px; font-size: .85rem;
+  background: var(--color-surface-3);
+}
+
+/* head */
+.postHead { display:flex; gap: 12px; align-items:flex-start; }
+.avatar {
+  width: 36px; height: 36px; border-radius:999px;
+  display:flex; align-items:center; justify-content:center;
+  font-weight: 800; background: rgba(255,255,255,.08);
+  border: 1px solid var(--color-border);
+}
+.headText { flex:1; }
+.titleRow { display:flex; gap: 10px; align-items:center; color:#a6b6c1; }
+.author { color: var(--color-offwhite); font-weight: 800; }
+.time { opacity:.9; }
+.postTitle { margin: 2px 0 0; font-weight: 800; }
+
+/* body + meta */
+.body { margin: 8px 0; line-height: 1.55; }
+.postMeta { display:flex; gap: 10px; align-items:center; color:#a6b6c1; }
+.dot { width:4px; height:4px; border-radius:999px; background: var(--color-border); display:inline-block; }
+
+/* replies */
+.replies { margin-top: 12px; display:grid; gap: 10px; }
+.reply {
+  display:grid; grid-template-columns: 32px 1fr; gap: 10px;
+  padding: 10px; border-radius: var(--radius-lg);
+  background: var(--color-surface-2);
+  border: 1px dashed var(--color-border);
+}
+.replyAvatar {
+  width: 32px; height: 32px; border-radius:999px;
+  display:flex; align-items:center; justify-content:center;
+  font-weight:800; background: rgba(255,255,255,.08);
+  border: 1px solid var(--color-border);
+}
+.replyBody { display:flex; flex-direction:column; gap: 6px; }
+.replyMeta { color:#a6b6c1; font-size:.95rem; }
+.replyAuthor { color: var(--color-offwhite); font-weight:800; }
+.replyText { line-height: 1.55; }
+
+.replyActions { display:flex; gap: 14px; }
+.replyActions > button {
+  background: transparent; border: 0; color: #a6b6c1; padding: 0;
+  font-weight: 700; font-size: .95rem;
+  cursor: pointer;
+}
+.replyActions > button:hover { color: var(--color-offwhite); }
