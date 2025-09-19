@@ -35,7 +35,7 @@ export default function Footer() {
                         <li><Link href="/Pricing">Pricing & Quote</Link></li>
                         <li><Link href="/Skills">Skills</Link></li>
                         <li><a href="/downloads/JD_SWENG_RES.pdf" download>Resume (PDF)</a></li>
-                        {/* <li><Link href="/#projects">Projects</Link></li> */}
+                        <li><Link href="/projects/voxcorda">Projects</Link></li>
                         <li>
                             <a
                                 href="/?faq=open"

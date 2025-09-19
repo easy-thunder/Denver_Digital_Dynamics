@@ -140,6 +140,7 @@
   color: #0e0b08;
   font-weight: 800;
   box-shadow: 0 10px 22px -10px rgba(167, 123, 58, .55);
+  cursor: pointer;
 }
 .button:disabled { opacity: .7; cursor: not-allowed; }
 

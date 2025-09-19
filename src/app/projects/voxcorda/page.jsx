@@ -54,7 +54,7 @@ export default function Projects() {
 
     try {
       // 1) Save in Supabase for everyone
-      const res = await fetch('/api/pilot-signups', {
+      const res = await fetch('/api/pilot_signup', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify(payload),
@@ -65,7 +65,7 @@ export default function Projects() {
       // 2) Notify me only if advertiser
       if (intents.includes('advertiser')) {
         try {
-          const r2 = await fetch('/api/advertiser-notify', {
+          const r2 = await fetch('/api/advertiser_notify', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({
@@ -181,7 +181,7 @@ export default function Projects() {
           <div className={styles.card}>
             <h3 className={styles.h3}>Apply to the Pilot</h3>
             <p className={styles.cardLead}>
-              I can't build this without your help. Tell me about about yourself, how you would like the system to change and help me bring your representation back to you!
+              I can't build this without your help. Tell me about about yourself, how you would like the system to change and help me bring your representation back to you! (This will notify you only when version 1 is released)
             </p>
 
             <form className={styles.form} onChange={onIntentToggle} onSubmit={onSubmit}>
@@ -215,7 +215,7 @@ export default function Projects() {
                   </label>
                 </div>
                 <p className={styles.hint}>
-                  Nobody likes putting themselves into a box. To sew the divide we must first acknowledge the difference. This information helps bridge the gap between Americans.
+                  Nobody likes putting themselves into a box. To sew the divide we must first acknowledge the difference. This information helps bridge the gap by surfacing issues with bi-partisan support.
                 </p>
               </fieldset>
 
@@ -259,7 +259,7 @@ export default function Projects() {
 
               <label className={styles.check}>
                 <input type="checkbox" name="updates" defaultChecked />
-                <span>Send me product updates & early features</span>
+                <span>Send me product updates & early features(You will receive more updates beyond the initial release)</span>
               </label>
 
               <button className={styles.button} disabled={busy}>

@@ -1,0 +1,35 @@
+.page { padding-bottom: var(--gap-xl); }
+
+.article {
+  background:
+    radial-gradient(900px 420px at 8% -10%,
+      color-mix(in oklab, var(--color-accent) 10%, transparent),
+      transparent),
+    linear-gradient(180deg, var(--color-surface-2), var(--color-surface-3));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: clamp(18px, 4svh, 36px);
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.55);
+}
+
+.article h2 {
+  font-size: var(--h1);
+  margin: 0 0 10px 0;
+  letter-spacing: -0.02em;
+}
+.article h3 { font-size: var(--h3); margin: 18px 0 8px; }
+.article p  { margin: 10px 0; font-size: var(--body); }
+.article a  { color: var(--color-cyan); text-decoration: underline; text-underline-offset: 2px; }
+
+.bullets { padding-left: 20px; margin: 10px 0; }
+.bullets li { margin: 8px 0; }
+.bullets strong { color: color-mix(in oklab, var(--color-offwhite) 92%, var(--color-cyan)); }
+
+.closing {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  font-weight: 600;
+}

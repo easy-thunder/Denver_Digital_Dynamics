@@ -5,7 +5,7 @@ export const runtime = 'nodejs'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_ROLE_KEY
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY // ⟵ anon key is fine on the server
 )
 
 export async function POST(req) {
@@ -28,7 +28,7 @@ export async function POST(req) {
     }
 
     // normalize & whitelist intents
-    const allowed = new Set(['creator','advertiser','consumer'])
+    const allowed = new Set(['creator', 'advertiser', 'consumer'])
     const normalizedIntents = Array.from(new Set((intents || [])
       .map(x => String(x).toLowerCase().trim())
       .filter(x => allowed.has(x))
@@ -38,20 +38,18 @@ export async function POST(req) {
       return NextResponse.json({ error: 'at least one intent is required' }, { status: 400 })
     }
 
-    const now = new Date().toISOString()
-    const row = {
-      email, name, org, role, usecase, updates, source,
-      intents: normalizedIntents,
-      updated_at: now
-    }
-
-    if (normalizedIntents.includes('advertiser') && adv_message) {
-      row.adv_message = adv_message
-    }
-
-    const { error } = await supabase
-      .from('pilot_signups')
-      .upsert(row, { onConflict: 'email' })
+    // Call the secure upsert
+    const { error } = await supabase.rpc('pilot_signup_upsert', {
+      p_email: String(email).trim().toLowerCase(),
+      p_name: (name || '').trim() || null,
+      p_org: (org || '').trim() || null,
+      p_role: (role || '').trim() || null,
+      p_usecase: (usecase || '').trim() || null,
+      p_updates: !!updates,
+      p_source: (source || 'projects-page').trim(),
+      p_intents: normalizedIntents,
+      p_adv_message: (adv_message || '').trim() || null
+    })
 
     if (error) throw error
 
