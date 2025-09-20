@@ -12,16 +12,10 @@ export async function POST(req) {
   try {
     const body = await req.json().catch(() => ({}))
     const {
-      name,
-      email,
-      org,
-      role,
-      usecase,
-      updates = true,
-      source = 'projects-page',
-      intents = [],
-      adv_message
-    } = body
+      name, email, org, role, usecase, updates = true, source = 'projects-page',
+      intents = [], adv_message,
+      tos_accepted = false, privacy_accepted = false, age_confirmed = false
+    } = body;
 
     if (!email || !usecase) {
       return NextResponse.json({ error: 'email and usecase are required' }, { status: 400 })
@@ -47,8 +41,13 @@ export async function POST(req) {
       p_usecase: (usecase || '').trim() || null,
       p_updates: !!updates,
       p_source: (source || 'projects-page').trim(),
-      p_intents: normalizedIntents,
-      p_adv_message: (adv_message || '').trim() || null
+      p_intents: normalizedIntents,           // text[] in SQL
+      p_adv_message: (adv_message || '').trim() || null,
+    
+      // ✅ use p_-prefixed names to match SQL args
+      p_tos_accepted: !!tos_accepted,
+      p_privacy_accepted: !!privacy_accepted,
+      p_age_confirmed: !!age_confirmed,
     })
 
     if (error) throw error

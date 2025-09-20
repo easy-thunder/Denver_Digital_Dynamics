@@ -62,6 +62,9 @@ export default function Projects() {
       usecase: (fd.get('usecase') || '').trim(),
       updates: Boolean(fd.get('updates')),
       source: 'projects-page',
+      tos_accepted: tosAccepted,
+      privacy_accepted: tosAccepted, 
+      age_confirmed: ageConfirmed,
       intents,
       adv_message: isAdvertiser ? (fd.get('adv_message') || '').trim() : undefined,
     }
