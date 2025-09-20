@@ -109,7 +109,7 @@
 }
 .textarea { resize: vertical; min-height: 120px; }
 
-.check { display:flex; align-items:center; gap: 10px; font-size: 0.95rem; opacity: .95; }
+.check { display:flex; align-items:center; gap: 10px; font-size: 0.95rem; opacity: .95;  }
 .check input { accent-color: var(--color-ai); }
 
 /* Groups */
@@ -275,3 +275,21 @@
   color: var(--color-offwhite);
 }
 .edgeText { margin: 0; opacity: .95; line-height: 1.55; }
+/* inline legal links inside labels */
+.inlineLink {
+  color: var(--color-cyan);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.inlineLink:hover { opacity: .9; }
+
+/* emphasized required checks */
+.must { font-weight: 600; }
+
+/* small legal hints */
+.hintSmall {
+  margin: 4px 0 10px;
+  font-size: 0.9rem;
+  color: color-mix(in oklab, var(--color-offwhite) 80%, var(--color-cyan));
+  opacity: .9;
+}

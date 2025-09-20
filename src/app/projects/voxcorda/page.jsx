@@ -41,6 +41,19 @@ export default function Projects() {
       return
     }
 
+    const tosAccepted = !!fd.get('tos')
+    const ageConfirmed = !!fd.get('age_confirm')
+    
+    if (!tosAccepted) {
+      setErr('Please accept the Terms of Service and Privacy Policy.')
+      setBusy(false)
+      return
+    }
+    if (!ageConfirmed) {
+      setErr('Please confirm you meet the age requirement (or have parental consent).')
+      setBusy(false)
+      return
+    }
     const payload = {
       name: (fd.get('name') || '').trim(),
       email: (fd.get('email') || '').trim(),
@@ -260,10 +273,40 @@ export default function Projects() {
                 />
               </label>
 
-              <label className={styles.check}>
-                <input type="checkbox" name="updates" defaultChecked />
-                <span>Send me product updates & early features(You will receive more updates beyond the initial release)</span>
-              </label>
+
+<label className={styles.check}>
+  <input type="checkbox" name="updates" defaultChecked />
+  <span>Send me product updates & early features (beyond the initial release)</span>
+</label>
+
+  {/* REQUIRED: Terms of Service & Privacy */}
+  <label className={`${styles.check} ${styles.must}`}>
+    <input type="checkbox" name="tos" required />
+    <span>
+      I have read and agree to the&nbsp;
+      <Link href="/projects/voxcorda/terms" className={styles.inlineLink} target="_blank">Terms of Service</Link>
+      &nbsp;and&nbsp;
+      <Link href="/projects/voxcorda/privacy" className={styles.inlineLink} target="_blank">Privacy Policy</Link>.
+    </span>
+  </label>
+  <p className={styles.hintSmall}>
+    We store your name, email, org (if provided), intents, and your political lean solely to tune
+    bipartisan ranking. We don’t sell your data. You can request deletion at any time.
+  </p>
+
+  {/* REQUIRED: Age / Parental consent */}
+  <label className={`${styles.check} ${styles.must}`}>
+    <input type="checkbox" name="age_confirm" required />
+    <span>
+      I am at least 16 years old, or I am 13–15 and have verifiable parental/guardian consent.
+      Users under 13 may not register.
+    </span>
+  </label>
+  <p className={styles.hintSmall}>
+    This pilot is intended for ages 16+. If you’re 13–15, a parent/guardian must consent. We’ll
+    provide a consent workflow before general release.
+  </p>
+
 
               <button className={styles.button} disabled={busy}>
                 {busy ? 'Submitting…' : 'Request Invite'}
