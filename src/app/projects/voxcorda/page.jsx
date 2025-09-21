@@ -398,7 +398,7 @@ export default function Projects() {
       <br />
       <br />
       <br />
-      <h2>Ballot issues example for pilot(Work in Progress):</h2>
+      <h2>Ballot issues example for pilot(How we start with social media):</h2>
       <BallotThreads />
     </main>
   )
