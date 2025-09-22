@@ -227,10 +227,10 @@ export default function Projects() {
                 <legend className={styles.legend}>Political lean (for feed tuning)</legend>
                 <div className={styles.radioRow}>
                   <label className={styles.tick}>
-                    <input type="radio" name="party" value="left" /> Democrat
+                    <input type="radio" name="party" value="left" /> Left
                   </label>
                   <label className={styles.tick}>
-                    <input type="radio" name="party" value="right" /> Republican
+                    <input type="radio" name="party" value="right" /> Right
                   </label>
                 </div>
                 <p className={styles.hint}>
