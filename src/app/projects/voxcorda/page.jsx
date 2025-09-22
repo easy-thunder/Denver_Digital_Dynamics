@@ -153,7 +153,7 @@ export default function Projects() {
 
             <h4 className={styles.h4}>Our path</h4>
             <p className={styles.note}>
-              We’re executing a <strong>4-phase plan</strong> toward liquid direct democracy. Phase 1 focuses on conversation quality
+              We’re executing a <strong>4-phase plan</strong> toward Direct Liquid Democracy. Phase 1 focuses on conversation quality
               and civic context; later phases introduce decision tools once the foundation is healthy.
             </p>
 
