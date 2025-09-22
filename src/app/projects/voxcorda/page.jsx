@@ -208,7 +208,7 @@ export default function Projects() {
               <input name="website" autoComplete="off" className={styles.honey} tabIndex={-1} />
 
               <label className={styles.label}>
-                <span>Name</span>
+                <span>User Name</span>
                 <input name="name" className={styles.input} required maxLength={120} />
               </label>
 
