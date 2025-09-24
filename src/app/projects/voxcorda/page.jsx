@@ -176,6 +176,9 @@ export default function Projects() {
               <Link href="/projects/voxcorda/manifesto" className={styles.link}>Jacob's Manifesto</Link>
               <span className={styles.sep}>•</span>
               <a href="https://gofund.me/8052698c9" className={styles.link}>Fund Me</a>
+              <span className={styles.sep}>•</span>
+              <a className={styles.link} href='https://www.reddit.com/r/Voxcorda/'>Discuss on Reddit</a>
+
 
             </div>
           </div>
