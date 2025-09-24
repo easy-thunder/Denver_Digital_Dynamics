@@ -132,20 +132,19 @@ export default function Projects() {
             <ul className={styles.list}>
               <li>Social feed and direct messaging.</li>
               <li>Bipartisan-tilt ranking: posts with cross-party likes are elevated; heat without balance is de-emphasized.</li>
-              <li>Google Civics API integration: link posts to real-world issues and representatives.</li>
-              <li>“Three arguments” under issues to frame trade-offs (for / against / key trade-off).</li>
+              <li>See ballot issues in your area and open a discussion about them.</li>
             </ul>
 
             <h4 className={styles.h4}>Our path</h4>
             <p className={styles.note}>
               We’re executing a <strong>4-phase plan</strong> toward Direct Liquid Democracy. Phase 1 focuses on conversation quality
-              and civic context; later phases introduce decision tools once the foundation is healthy.
+              and connection to your ballot issues.
             </p>
 
             {/* ---- Final vision ---- */}
             <h3 className={styles.h3}>The final vision</h3>
             <p className={styles.visionBody}>
-              We’re building a direct, delegable democracy—no elected representatives required—where everyone’s voice has equal weight.
+              We’re building a platform to support a Direct Liquid Democracy where everyone’s voice has equal weight.
               Decisions happen in cycles so we focus on one issue at a time and publish transparent outcomes.
             </p>
 
@@ -189,7 +188,6 @@ export default function Projects() {
             </p>
 
             <form className={styles.form} onChange={onIntentToggle} onSubmit={onSubmit}>
-              {/* honeypot */}
               <input name="website" autoComplete="off" className={styles.honey} tabIndex={-1} />
 
               <label className={styles.label}>
@@ -207,7 +205,6 @@ export default function Projects() {
                 <input name="org" className={styles.input} />
               </label>
 
-              {/* Party choice for algorithm tuning */}
               <fieldset className={styles.group}>
                 <legend className={styles.legend}>Political lean (for feed tuning)</legend>
                 <div className={styles.radioRow}>
@@ -223,7 +220,6 @@ export default function Projects() {
                 </p>
               </fieldset>
 
-              {/* Intents */}
               <fieldset className={styles.group}>
                 <legend className={styles.legend}>I’m interested as a…</legend>
                 <label className={styles.tick}>
@@ -237,7 +233,6 @@ export default function Projects() {
                 </label>
               </fieldset>
 
-              {/* Only for advertisers */}
               {isAdvertiser && (
                 <label className={styles.label}>
                   <span>Advertiser message</span>
@@ -267,7 +262,6 @@ export default function Projects() {
                 <span>Send me product updates & early features (beyond the initial release)</span>
               </label>
 
-              {/* REQUIRED: Terms of Service & Privacy */}
               <label className={`${styles.check} ${styles.must}`}>
                 <input type="checkbox" name="tos" required />
                 <span>

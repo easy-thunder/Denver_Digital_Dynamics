@@ -18,9 +18,9 @@ export default function  Hero() {
           </p>
 
           <nav className={styles.ctaRow} aria-label="Primary actions">
-            <Link href="/projects/voxcorda/pilot" className={`${styles.btn} ${styles.primary}`}>
+            {/* <Link href="/projects/voxcorda/pilot" className={`${styles.btn} ${styles.primary}`}>
               Join the Pilot
-            </Link>
+            </Link> */}
             <Link href="/projects/voxcorda/manifesto" className={`${styles.btn} ${styles.secondary}`}>
               Read the Manifesto
             </Link>
