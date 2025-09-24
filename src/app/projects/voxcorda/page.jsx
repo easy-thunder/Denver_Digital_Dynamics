@@ -1,9 +1,13 @@
 'use client'
 
+import Hero from '@/components/Voxcorda/Hero/Hero'
+
 import { useState } from 'react'
 import Link from 'next/link'
 import styles from './Projects.module.css'
 import BallotThreads from '@/components/demo/BallotThreads'
+import Problem from '@/components/Voxcorda/Problem/Problem'
+import DeeperProblem from '@/components/Voxcorda/Problem/DeeperProblem'
 
 export default function Projects() {
   const [busy, setBusy] = useState(false)
@@ -114,32 +118,13 @@ export default function Projects() {
 
   return (
     <main className={styles.page}>
-      {/* --- Hero / Vision --- */}
-      <section className={styles.hero}>
-        <div className={styles.container}>
-          <h1 className={styles.h1}>Voxcorda Pilot</h1>
-          <p className={styles.tagline}>
-            A people-first social platform that surfaces **bipartisan agreement** and downshifts heat.
-            This starts as a social media platform. The final vision is to remove the bought politicians through direct voting, revocable delegation, and transparent profiles for those we elect.
-          </p>
+      <Hero />
+      {/* <Problem /> */}
+      {/* <DeeperProblem /> */}
 
-          <div className={styles.longform}>
-            <p>
-              Our ranking algorithm detects partisan skew and lifts posts that earn support across
-              lines—while burying one-sided outrage. You’ll also be able to attach posts to real
-              ballot issues in your local area via the Google Civics API and browse a concise “three arguments” view.
-            </p>
-            <div className={styles.badges}>
-              <span className={styles.badge}>Bipartisan signal</span>
-              <span className={styles.badge}>Feed + messaging</span>
-              <span className={styles.badge}>Civics-linked issues</span>
-              <span className={styles.badge}>Three-arguments view</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* --- Grid: Details + Pilot form --- */}
+
+
       <section className={styles.gridSection}>
         <div className={styles.containerGrid}>
           <div className={styles.panel}>
@@ -322,7 +307,7 @@ export default function Projects() {
         </div>
       </section>
       {/* --- Cycle diagram + edge cases --- */}
-      <section className={styles.cycleSection}>
+      {/* <section className={styles.cycleSection}>
         <div className={styles.container}>
           <h2 className={styles.h2}>How the decision cycle works(Final Vision)</h2>
           <p className={styles.sub}>
@@ -332,7 +317,6 @@ export default function Projects() {
         </div>
 
         <div className={styles.cycleGrid}>
-          {/* Left: image */}
           <div className={styles.cycleImageWrap}>
             <img
               className={styles.cycleImg}
@@ -342,7 +326,6 @@ export default function Projects() {
             />
           </div>
 
-          {/* Right: edge cases */}
           <aside className={styles.edgePanel} aria-label="Edge cases & guardrails">
             <h3 className={styles.edgeTitle}>Edge cases & guardrails</h3>
             <ul className={styles.edgeList}>
@@ -393,13 +376,13 @@ export default function Projects() {
             </ul>
           </aside>
         </div>
-      </section>
+      </section> */}
 
+      {/* <br />
       <br />
-      <br />
-      <br />
-      <h2>Ballot issues example for pilot(How we start with social media):</h2>
-      <BallotThreads />
+      <br /> */}
+      {/* <h2>Ballot issues example for pilot(How we start with social media):</h2> */}
+      {/* <BallotThreads /> */}
     </main>
   )
 }

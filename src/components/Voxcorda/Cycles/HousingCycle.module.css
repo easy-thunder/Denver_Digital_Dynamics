@@ -1,0 +1,111 @@
+.shell { display: grid; gap: 14px; }
+
+.title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  letter-spacing: -0.01em;
+}
+
+.diagram {
+  display: grid;
+  gap: 10px;
+  align-items: start;
+}
+
+.ring {
+  width: 100%;
+  max-width: 520px;
+  margin-inline: auto;
+  display: block;
+}
+
+.ringCircle {
+  fill: none;
+  stroke: color-mix(in oklab, var(--color-border) 90%, transparent);
+  stroke-width: 2;
+}
+
+.arrow {
+  fill: color-mix(in oklab, var(--color-cyan) 40%, var(--color-offwhite));
+  opacity: .65;
+}
+
+.node { fill: color-mix(in oklab, var(--color-surface-3) 80%, var(--color-offwhite)); }
+.nodeActive { fill: var(--color-cyan); }
+
+.nodeList {
+  display: grid;
+  gap: 8px;
+}
+
+.nodeItem {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-offwhite);
+  text-align: left;
+  cursor: pointer;
+}
+
+.nodeItemActive {
+  background:
+    radial-gradient(520px 280px at 80% -10%,
+      color-mix(in oklab, var(--color-ai) 14%, transparent),
+      transparent),
+    var(--color-surface-2);
+  box-shadow: 0 10px 22px -12px rgba(0,0,0,.45);
+}
+
+.nodeIndex {
+  width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-3);
+  font-weight: 800; font-size: 12px;
+}
+
+.nodeLabel { letter-spacing: .2px; }
+
+.panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--gap-lg);
+  background: var(--color-surface);
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.45);
+}
+
+.blurb {
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+  opacity: .95;
+}
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface-2);
+  padding: 12px;
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.35);
+}
+
+.card h4 { margin: 0 0 8px; font-size: 1.05rem; color: var(--color-cyan); }
+
+.ul { margin: 0; padding-left: 18px; line-height: 1.6; opacity: .95; }
+
+.faq { margin: 0; }
+.qa { margin-bottom: 8px; }
+.qa dt { font-weight: 700; }
+.qa dd { margin: 2px 0 0 0; opacity: .95; line-height: 1.55; }

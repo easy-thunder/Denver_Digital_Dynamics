@@ -1,0 +1,42 @@
+.problem {
+    margin-top: var(--gap-xl);
+    padding: clamp(24px, 6svh, 48px) 0;
+  }
+  
+  .title {
+    font-size: var(--h2);
+    margin-bottom: var(--gap-lg);
+    text-align: center;
+    letter-spacing: -0.015em;
+  }
+  
+  .block {
+    background:
+      radial-gradient(720px 440px at 8% -10%,
+        color-mix(in oklab, var(--color-accent) 10%, transparent),
+        transparent),
+      var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--gap-lg);
+    margin-bottom: var(--gap-lg);
+    box-shadow: 0 10px 24px -12px rgba(0,0,0,.55);
+  }
+  
+  .head {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    margin-bottom: 8px;
+    color: var(--color-cyan);
+    letter-spacing: .2px;
+  }
+  
+  /* Paragraphs scoped to this component to satisfy CSS Modules purity */
+  .block p {
+    margin: 0 0 10px 0;
+    line-height: 1.65;
+    opacity: .95;
+    color: var(--color-offwhite);
+  }
+  
+  .block p:last-child { margin-bottom: 0; }
+  

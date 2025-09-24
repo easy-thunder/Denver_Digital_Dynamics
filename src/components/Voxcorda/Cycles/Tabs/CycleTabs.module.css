@@ -1,0 +1,50 @@
+.shell { margin-top: var(--gap-xl); }
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-offwhite);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.tabActive {
+  background:
+    radial-gradient(520px 280px at 80% -10%,
+      color-mix(in oklab, var(--color-ai) 14%, transparent),
+      transparent),
+    var(--color-surface-2);
+  box-shadow: 0 10px 22px -12px rgba(0,0,0,.45);
+}
+
+.tab:focus-visible { outline: 2px solid color-mix(in oklab, var(--color-cyan) 55%, transparent); }
+
+.tabLabel { letter-spacing: .2px; }
+.badge {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-3);
+  padding: 2px 6px;
+  border-radius: 999px;
+  font-size: 12px;
+  opacity: .9;
+}
+
+.panel {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--gap-lg);
+  background: var(--color-surface);
+  box-shadow: 0 10px 24px -12px rgba(0,0,0,.45);
+}
