@@ -22,8 +22,15 @@ export default function  Hero() {
               Join the Pilot
             </Link> */}
             <Link href="/projects/voxcorda/manifesto" className={`${styles.btn} ${styles.secondary}`}>
-              Read the Manifesto
+              Manifesto
             </Link>
+            <a href="https://voxcorda.printify.me/" className={`${styles.btn} ${styles.primary}`}>
+              Buy Advocate Gear
+            </a>
+            <a href="https://www.reddit.com/r/Voxcorda/" className={`${styles.btn} ${styles.secondary}`}>
+              Reddit Discussion
+            </a>
+            
 
           </nav>
         </div>
