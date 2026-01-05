@@ -1,0 +1,71 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .labelRow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  
+  .required {
+    color: var(--gold);
+  }
+  
+  .hint {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .toolbar button {
+    font: inherit;
+    border-radius: 8px;
+    border: 1px solid var(--rail);
+    background: var(--surface);
+    color: var(--text);
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+  
+  .toolbar button:hover {
+    background: var(--surface-hover);
+  }
+  
+  .textarea {
+    margin-top: 4px;
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--rail);
+    padding: 9px 11px;
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    resize: vertical;
+    min-height: 220px;
+    line-height: 1.6;
+  }
+  
+  .textarea::placeholder {
+    color: rgba(255,255,255,0.35);
+  }
+  
+  .textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 1px rgba(57,210,192,0.45);
+    background: var(--surface-hover);
+  }
+  

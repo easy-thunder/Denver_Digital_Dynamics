@@ -1,0 +1,117 @@
+.quiz {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 16px;
+    background: var(--surface);
+    box-shadow: var(--card-shadow);
+  }
+  
+  .questionCard {
+    padding: 16px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .questionCard:first-of-type {
+    border-top: none;
+  }
+  
+  .questionHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .qNumber {
+    flex-shrink: 0;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: rgba(255,255,255,0.08);
+    color: var(--muted);
+  }
+  
+  .questionText {
+    margin: 0;
+    font-size: 0.98rem;
+  }
+  
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .option {
+    border-radius: 999px;
+    border: 1px solid var(--ring);
+    background: rgba(255,255,255,0.02);
+    color: var(--text);
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.12s ease, border-color 0.12s ease, transform 0.04s ease;
+  }
+  
+  .option:hover {
+    background: rgba(255,255,255,0.06);
+  }
+  
+  .optionSelected {
+    background: rgba(255,255,255,0.10);
+    border-color: var(--teal);
+  }
+  
+  .optionCorrect {
+    background: rgba(57,210,192,0.18);
+    border-color: var(--teal);
+  }
+  
+  .optionIncorrect {
+    background: rgba(255,80,80,0.12);
+    border-color: rgba(255,80,80,0.8);
+  }
+  
+  .explanation {
+    margin-top: 8px;
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .score {
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  
+  .checkBtn {
+    border-radius: 999px;
+    border: 1px solid var(--teal);
+    background: var(--teal);
+    color: var(--ink-on-primary);
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.04s ease, filter 0.12s ease;
+  }
+  
+  .checkBtn:hover {
+    filter: brightness(1.05);
+  }
+  
+  .checkBtn:active {
+    transform: translateY(1px);
+  }
+  

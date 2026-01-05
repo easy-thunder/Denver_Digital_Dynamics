@@ -1,0 +1,138 @@
+.page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 40px;
+  }
+  
+  .form {
+    display: grid;
+    gap: 16px;
+    background: var(--card-root, rgba(255,255,255,0.07));
+    border-radius: 18px;
+    padding: 20px 20px 24px;
+    box-shadow: var(--card-shadow, 0 10px 24px -12px rgba(0,0,0,0.55));
+    border: 1px solid var(--rail, rgba(255,255,255,0.18));
+  }
+  
+  /* Headline */
+  .heading {
+    margin-bottom: 18px;
+    font-size: 1.35rem;
+    font-family: var(--font-ui, system-ui, sans-serif);
+  }
+  
+  /* Field wrappers */
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .fieldRow {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .fieldRow.three {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+  
+  .fieldRow.threeWide {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  /* Labels */
+  .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  
+  .required {
+    color: var(--gold);
+  }
+  
+  /* Inputs / textareas */
+  .input,
+  .textarea {
+    background: var(--surface);
+    border-radius: 10px;
+    border: 1px solid var(--rail);
+    padding: 9px 11px;
+    color: var(--text);
+    font: inherit;
+    outline: none;
+    transition: border-color 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+  }
+  
+  .input::placeholder,
+  .textarea::placeholder {
+    color: rgba(255,255,255,0.35);
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 1px rgba(57,210,192,0.45);
+    background: var(--surface-hover);
+  }
+  
+  /* Textarea sizing */
+  .textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* Error text */
+  .error {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+  }
+  
+  /* Footer row with buttons */
+  .actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+    justify-content: flex-start;
+  }
+  
+  /* Small screen adjustments */
+  @media (max-width: 640px) {
+    .page {
+      padding: 24px 16px 32px;
+    }
+  
+    .form {
+      padding: 18px 16px 22px;
+    }
+  }
+  
+
+
+  .previewSection {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .previewHeading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  
+  .previewHint {
+    margin: 0 0 16px;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  
+  .previewCard {
+    border-radius: 18px;
+    background: rgba(0, 0, 0, 0.45);
+    box-shadow: var(--card-shadow);
+    padding: 24px 20px;
+    overflow: hidden;
+  }
+  

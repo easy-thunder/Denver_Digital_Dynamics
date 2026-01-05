@@ -1,0 +1,197 @@
+/* app/team/articles/[slug]/quiz/new/QuizBuilder.module.css */
+
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px 16px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* Header */
+  .header {
+    margin-bottom: 8px;
+  }
+  
+  .heading {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0 0 4px;
+  }
+  
+  .subheading {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  
+  /* Meta section */
+  .metaSection {
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 16px 18px;
+    display: grid;
+    gap: 12px;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .input,
+  .textarea,
+  .typeSelect {
+    background: #05090f;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 8px 10px;
+    color: var(--text);
+    font: inherit;
+  }
+  
+  .input:focus,
+  .textarea:focus,
+  .typeSelect:focus {
+    outline: 1px solid var(--teal);
+    border-color: var(--teal);
+  }
+  
+  .textarea {
+    min-height: 64px;
+    resize: vertical;
+  }
+  
+  /* Questions section */
+  .questionsSection {
+    border-radius: 16px;
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .questionsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .questionsHeading {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .addButtons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .empty {
+    margin: 8px 0 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  
+  /* Question cards */
+  .questionList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+  }
+  
+  .questionCard {
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #05090f;
+    padding: 12px 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .questionHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+  
+  .qLabel {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--muted);
+  }
+  
+  .typeSelect {
+    min-width: 160px;
+  }
+  
+  .removeBtn {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 999px;
+  }
+  
+  .removeBtn:hover {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+  }
+  
+  /* Choices */
+  .choicesGrid {
+    display: grid;
+    gap: 6px;
+  }
+  
+  .choiceRow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+  }
+  
+  .choiceRow input[type="radio"] {
+    accent-color: var(--teal);
+  }
+  
+  .trueFalseRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Footer + error */
+  .error {
+    margin-top: 4px;
+    color: #ff6b6b;
+    font-size: 0.9rem;
+  }
+  
+  .footer {
+    margin-top: 4px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  

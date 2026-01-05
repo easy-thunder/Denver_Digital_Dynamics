@@ -1,0 +1,137 @@
+.article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 24px 0 32px;
+  }
+  
+  .header {
+    margin-bottom: 16px;
+  }
+  
+  .kickerRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  
+  .kicker {
+    font-weight: 700;
+    color: var(--teal);
+  }
+  
+  .subKicker {
+    opacity: 0.9;
+  }
+  
+  .dot {
+    opacity: 0.6;
+  }
+  
+  .title {
+    margin: 4px 0 4px;
+    font-size: 1.9rem;
+    line-height: 1.2;
+    font-family: var(--font-ui, system-ui, sans-serif);
+  }
+  
+  .topicDetail {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  
+  .hero {
+    margin: 18px 0 10px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--surface);
+  }
+  
+  .heroImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .excerpt {
+    margin: 10px 0 18px;
+    font-size: 1.05rem;
+    color: rgba(241,250,255,0.9);
+  }
+  
+  .body {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+  
+  /* Markdown typography */
+  .p {
+    margin: 0 0 1em;
+  }
+  
+  .h2 {
+    margin: 1.75em 0 0.5em;
+    font-size: 1.35rem;
+  }
+  
+  .h3 {
+    margin: 1.4em 0 0.4em;
+    font-size: 1.15rem;
+  }
+  
+  .ul,
+  .ol {
+    margin: 0 0 1em 1.25em;
+    padding-left: 1em;
+  }
+  
+  .link {
+    color: var(--teal);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  
+  .link:hover {
+    filter: brightness(1.1);
+  }
+  
+  .inlineImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 10px 0;
+  }
+  
+  /* Small screens */
+  @media (max-width: 640px) {
+    .article {
+      padding: 16px 0 24px;
+    }
+  
+    .title {
+      font-size: 1.6rem;
+    }
+  }
+
+
+  .quizSection {
+    margin-top: 32px;
+  }
+  
+  .quizHeading {
+    font-size: 1.3rem;
+    margin: 0 0 4px;
+  }
+  
+  .quizDescription {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  

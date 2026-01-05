@@ -1,0 +1,100 @@
+.tree {
+    border-radius: 16px;
+    background: var(--surface-soft, #101318);
+    border: 1px solid var(--border-subtle, rgba(255,255,255,.06));
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    color: var(--text, #f9fafb);
+  }
+  
+  .empty {
+    color: var(--muted, #9ca3af);
+    font-size: 0.9rem;
+  }
+  
+  .categoryBlock + .categoryBlock {
+    margin-top: 4px;
+  }
+  
+  .level {
+    margin-left: 18px;
+  }
+  
+  /* Shared row styling */
+  .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 6px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    color: inherit;
+    outline: none;
+  }
+  
+  .row:hover {
+    background: rgba(255,255,255,.04);
+  }
+  
+  /* Folder rows (category / subcategory / topic detail) */
+  .folderRow {
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  
+  .subFolderRow {
+    font-size: 0.9rem;
+    opacity: 0.96;
+  }
+  
+  .topicRow {
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0.92;
+  }
+  
+  .folderLabel {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* File rows (article titles) */
+  .fileRow {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: var(--muted, #a1a1aa);
+  }
+  
+  .fileRow:hover {
+    background: rgba(45,212,191,.08); /* subtle teal hover */
+    color: var(--text, #f9fafb);
+  }
+  
+  .fileBullet {
+    width: 14px;
+    opacity: 0.6;
+  }
+  
+  .fileLabel {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Chevron / caret */
+  .chevron {
+    width: 16px;
+    flex: 0 0 16px;
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+  
