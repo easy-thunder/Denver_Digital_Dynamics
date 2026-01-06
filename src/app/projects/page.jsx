@@ -22,12 +22,12 @@ const projects = [
     tech: ['Next.js', 'SCSS Modules', 'React', 'Mailchimp'],
   },
   {
-    slug: 'inthe-dark-game',
+    slug: 'in-the-dark',
     name: 'In The Dark (Game)',
     status: 'In Development',
     summary:
-      'A narrative-driven game blending exploration and tension, with a focus on atmosphere and systemic design.',
-    liveUrl: null, // e.g. itch.io link later
+      'A game that combines rougelite features with tower defense with non-stop action.',
+    liveUrl: 'https://github.com/easy-thunder/inTheDark', // e.g. itch.io link later
     tech: ['Pygame', 'Python', 'Pixel Art'],
   },
 ];
@@ -72,7 +72,7 @@ function ProjectCard({ project }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Visit live site
+            Visit site
           </a>
         ) : (
           <span className={styles.secondaryDisabled}>Live site coming soon</span>
